@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:hackathon_google/core/extensions/theme_extension.dart';
 import 'package:hackathon_google/features/auth_screen/widgets/auth_form.dart';
+import 'package:hackathon_google/features/main_view/representation/main_view.dart';
 import 'package:hackathon_google/shared/themed_background/themed_background.dart';
+import 'package:hackathon_google/utils/adaptive_navigator/adaptive_navigator.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -31,7 +33,13 @@ class _AuthScreenState extends State<AuthScreen> {
       password: password,
     );
     print('[AuthService] Sign in success. UID: ${credential.user?.uid}');
-    return credential.user;
+    if (!mounted) return null;
+    AdaptiveNavigator.pushAndRemoveUntil(
+      context,
+      MainView(),
+      (Route<dynamic> route) => false,
+    );
+    return null;
   }
 
   Future<fb.User?> _signUp(String email, String password) async {
@@ -41,6 +49,12 @@ class _AuthScreenState extends State<AuthScreen> {
       password: password,
     );
     print('[AuthService] Sign up success. UID: ${credential.user?.uid}');
+    if (!mounted) return null;
+    AdaptiveNavigator.pushAndRemoveUntil(
+      context,
+      MainView(),
+      (Route<dynamic> route) => false,
+    );
     return credential.user;
   }
 

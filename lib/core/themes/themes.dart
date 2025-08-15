@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 final lightTheme = ThemeData(
   brightness: Brightness.light,
   colorScheme: ColorScheme.light(
-    primary: Colors.amber[300]!,
+    primary: const Color.fromARGB(255, 49, 165, 76),
     secondary: Colors.white,
     surface: Color.fromRGBO(20, 20, 20, 1),
     error: Colors.red,
@@ -20,6 +20,23 @@ final lightTheme = ThemeData(
     backgroundColor: Colors.white,
     centerTitle: false,
     iconTheme: IconThemeData(color: Colors.black),
+  ),
+  dropdownMenuTheme: DropdownMenuThemeData(
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.0),
+        borderSide: BorderSide(color: Colors.grey[400]!),
+      ),
+      filled: true,
+      fillColor: Colors.white,
+      contentPadding: const EdgeInsets.all(16.0),
+    ),
+    menuStyle: MenuStyle(
+      backgroundColor: WidgetStateProperty.all(Colors.white),
+      shape: WidgetStateProperty.all(
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+      ),
+    ),
   ),
 
   inputDecorationTheme: InputDecorationTheme(

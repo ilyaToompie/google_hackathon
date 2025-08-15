@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:hackathon_google/core/extensions/theme_extension.dart';
-import 'package:hackathon_google/features/auth_screen/auth_screen.dart';
-import 'package:hackathon_google/features/home_screen/representation/home_screen.dart';
+import 'package:hackathon_google/features/dashboard_screen/dashboard_screen.dart';
+import 'package:hackathon_google/features/industrial_pulse/industrial_pulse.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -16,8 +16,8 @@ class _MainViewState extends State<MainView> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    const HomeScreen(),
-    const AuthScreen(),
+    DashboardScreen(),
+    IndustrialPulse(),
     const Center(child: Text('Home Screen')),
     const Center(child: Text('Home Screen')),
   ];
@@ -50,7 +50,6 @@ class _MainViewState extends State<MainView> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: GNav(
-                      textSize: context.text.displayLarge!.fontSize,
                       duration: Duration(milliseconds: 200),
                       selectedIndex: _selectedIndex,
                       onTabChange: (index) {
@@ -60,7 +59,7 @@ class _MainViewState extends State<MainView> {
                       },
                       gap: 8,
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
+                        horizontal: 16,
                         vertical: 12,
                       ),
                       activeColor: context.colors.onPrimary,
@@ -68,12 +67,12 @@ class _MainViewState extends State<MainView> {
                       tabBackgroundColor: context.colors.primary,
                       tabs: [
                         GButton(
-                          icon: Icons.home_rounded,
-                          text: 'navigation.home-screen'.tr(),
+                          icon: Icons.dashboard_rounded,
+                          text: 'navigation.dash-board'.tr(),
                         ),
                         GButton(
-                          icon: Icons.school_rounded,
-                          text: 'navigation.learn-screen'.tr(),
+                          icon: Icons.factory_rounded,
+                          text: 'navigation.industrial_pulse'.tr(),
                         ),
                         GButton(
                           icon: Icons.sports_martial_arts_rounded,

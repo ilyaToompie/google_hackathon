@@ -1,5 +1,7 @@
 {
   "navigation": {
+    "dash-board": "Dashboard",
+    "industrial_pulse": "Ind. Pulse",
     "home-screen": "Home",
     "learn-screen": "Learn",
     "practice-screen": "Practice",
@@ -26,5 +28,129 @@
     "signing-in": "Signing in...",
     "signing-up": "Signing up...",
     "confirm-password": "Confirm Password"
-  }
+  },
+  "home-screen": {
+    "title": "Home Screen"
+  },
+  
+  "dashboard": {
+    "title": "Environmental Monitoring",
+    "last_notifications": "Latest notifications",
+    "kpi": {
+      "objects": "Objects under observation",
+      "new_anomalies": "New anomalies (24h)",
+      "risk_regions": "Regions at risk"
+    },
+    "hotspot": {
+      "drought_high": "Drought risk: High",
+      "emissions_medium": "Emissions exceedance: Medium",
+      "ndvi_drop": "NDVI decrease: 5%"
+    },
+    "notification": {
+      "warning": "WARNING",
+      "info": "INFO",
+      "ndvi_drop_kostanay": "NDVI decreased in Kostanay region by 5%",
+      "soil_moisture_normal": "Soil moisture in Almaty region is normal"
+    }
+  },
+  "regions": {
+    "almaty": "Almaty",
+    "astana": "Astana",
+    "kostanay": "Kostanay"
+  },
+  "industrial_pulse": {
+    "title": "Industrial Pulse",
+    "add_object": "Add Object",
+    "filter": {
+      "region": "Region",
+      "risk": "Risk Level"
+    },
+    "emissions": "Emissions",
+    "anomalies": "Anomalies",
+    "generate_ai_report": "Generate AI Report",
+    "layers": {
+      "zones": "Impact Zones",
+      "wind": "Wind Direction",
+      "satellite": "Satellite View"
+    }
+  },
+  "common": {
+    "all": "All",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "industry": {
+    "plant1": {
+      "name": "KazMetallurgy Plant",
+      "anomalies": "Emission spikes detected in Q2 2025"
+    },
+    "plant2": {
+      "name": "Astana Energy Complex",
+      "anomalies": "Minor temperature anomalies recorded in Q1 2025"
+    },
+    "type": {
+      "metallurgy": "Metallurgy",
+      "energy": "Energy Production"
+    }
+  },
+  "filters": {
+    "region": "Region",
+    "industryType": "Industry Type",
+    "riskStatus": "Risk Status"
+  },
+  "map": {
+    "placeholder": "Map Placeholder",
+    "layers": {
+      "influenceZones": "Influence Zones (AI)",
+      "windRose": "Wind Rose",
+      "satellite": "Satellite View"
+    }
+  },
+  "kazakhstanskaya_coal_mine_name": "Kazakhstanskaya Coal Mine",
+  "kazakhstanskaya_coal_mine_desc": "A large coal mine in Shakhtinsk, Karaganda region, significant dust and sulfur dioxide emissions.",
+
+  "lenin_coal_mine_name": "V. I. Lenin Coal Mine",
+  "lenin_coal_mine_desc": "An operational coal mine in Karaganda region, producing bituminous coal with associated dust pollution.",
+
+  "shubarkol_centralny_coal_mine_name": "Shubarkol Central Coal Mine",
+  "shubarkol_centralny_coal_mine_desc": "A major open-pit coal mine in central Kazakhstan with moderate air pollution levels.",
+
+  "zhereks_gold_mine_name": "Zherek Gold Mine",
+  "zhereks_gold_mine_desc": "A gold mining site near Semey, with tailings storage posing water contamination risks.",
+
+  "dzhezkazgan_complex_name": "Dzhezkazgan Mining and Metallurgical Complex",
+  "dzhezkazgan_complex_desc": "A copper mining and smelting hub in central Kazakhstan, major source of industrial emissions.",
+
+  "ekibastuz_gres1_name": "Ekibastuz GRES-1 Power Plant",
+  "ekibastuz_gres1_desc": "One of the largest coal-fired power plants in the world, a leading emitter of ash and SO₂.",
+
+  "atemda_oil_refinery_name": "Atyrau Oil Refinery",
+  "atyrau_refinery_desc": "A major oil refinery on the Caspian coast, known for hydrogen sulfide emissions and strong odors.",
+
+  "yermakovsky_smelter_name": "Yermakovsky Smelter",
+  "yermakovsky_smelter_desc": "A metallurgical facility in Pavlodar region producing copper and other metals, notable for heavy metal pollution.",
+
+  "kostenko_mine_name": "Kostenko Coal Mine",
+  "kostenko_mine_desc": "A deep coal mine in Karaganda, associated with high methane levels and dust emissions.",
+
+  "bogatyr_komir_mine_name": "Bogatyr Komir Mine",
+  "bogatyr_komir_mine_desc": "One of the largest coal mines in the world, located in Pavlodar region, producing millions of tons annually.",
+
+  "vostochny_coal_mine_name": "Vostochny Coal Mine",
+  "vostochny_coal_mine_desc": "A major coal mining operation in Pavlodar region, significant particulate matter emissions.",
+
+  "severny_coal_mine_name": "Severny Coal Mine",
+  "severny_coal_mine_desc": "Large open-pit coal mine in Pavlodar region, contributing to regional air pollution.",
+
+  "ridder_sokolnoe_mine_name": "Ridder Sokolnoe Mine",
+  "ridder_sokolnoe_mine_desc": "A polymetallic mine in East Kazakhstan, producing zinc, lead, and copper with associated waste issues.",
+
+  "kazatomprom_uranium_name": "Kazatomprom Uranium Site",
+  "kazatomprom_uranium_desc": "Uranium mining and processing facilities, potential radiation and groundwater contamination risks.",
+
+  "tau_ken_samruk_mine_desc": "Tau-Ken Samruk Mining Sites",
+  "tau_ken_samruk_desc": "National mining company sites across Kazakhstan, producing ferrous and non-ferrous metals."
+
+
 }

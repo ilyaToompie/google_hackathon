@@ -1,23 +1,41 @@
-class UserModel {
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+class AppUser {
   final String uid;
-  final String username;
-  final String avatarUrl;
+  final String? email;
+  final String? displayName;
+  final String? photoUrl;
 
-  UserModel({
-    required this.uid,
-    required this.username,
-    required this.avatarUrl,
-  });
-
-  factory UserModel.fromMap(Map<String, dynamic> map, String documentId) {
-    return UserModel(
-      uid: documentId,
-      username: map['username'] ?? '',
-      avatarUrl: map['avatarUrl'] ?? '',
-    );
-  }
+  AppUser({required this.uid, this.email, this.displayName, this.photoUrl});
 
   Map<String, dynamic> toMap() {
-    return {'username': username, 'avatarUrl': avatarUrl};
+    return {'email': email, 'displayName': displayName, 'photoUrl': photoUrl};
   }
+
+  factory AppUser.fromFirestore(DocumentSnapshot doc) {
+    return AppUser(
+      uid: doc.id,
+      email: doc['email'] as String?,
+      displayName: doc['displayName'] as String? ?? 'user',
+      photoUrl: doc['photoUrl'] as String? ?? '',
+    );
+  }
+}
+
+Future<AppUser?> fetchUserByUid(String uid) async {
+  final doc = await FirebaseFirestore.instance
+      .collection('users')
+      .doc(uid)
+      .get();
+
+  if (!doc.exists) return null;
+
+  return AppUser.fromFirestore(doc);
+}
+
+Future<AppUser?> loadUser() async {
+  final uid = FirebaseAuth.instance.currentUser?.uid;
+  if (uid == null) return null;
+  return await fetchUserByUid(uid);
 }
