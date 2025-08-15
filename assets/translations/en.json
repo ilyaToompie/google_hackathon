@@ -1,0 +1,30 @@
+{
+  "navigation": {
+    "home-screen": "Home",
+    "learn-screen": "Learn",
+    "practice-screen": "Practice",
+    "social-screen": "Social"
+  },
+  "auth-exceptions": {
+    "invalidEmail": "The email address is badly formatted.",
+    "userDisabled": "This user has been disabled.",
+    "userNotFound": "No user found for the provided email.",
+    "wrongPassword": "Incorrect password provided for this user.",
+    "emailAlreadyInUse": "The email is already associated with an account.",
+    "operationNotAllowed": "This operation is not allowed. Please contact support.",
+    "weakPassword": "The password is too weak.",
+    "signOutFailed": "Failed to sign out. Please try again.",
+    "unknown": "An unknown error occurred. Please try again.",
+    "passwordsDoNotMatch": "Passwords do not match. Please try again."
+  },
+  "auth-screen": {
+    "title": "Authentication",
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "signing-in": "Signing in...",
+    "signing-up": "Signing up...",
+    "confirm-password": "Confirm Password"
+  }
+}
